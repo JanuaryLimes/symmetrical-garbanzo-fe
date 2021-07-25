@@ -1,8 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    async function load() {
+      const response = await fetch("/ping");
+      const movies = await response.json();
+      console.log("movies", { movies });
+    }
+    load();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
