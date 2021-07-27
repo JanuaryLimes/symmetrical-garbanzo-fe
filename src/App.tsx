@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { AppRoutes } from "./routes";
 
@@ -11,7 +12,11 @@ function App() {
     load();
   }, []);
 
-  return <AppRoutes />;
+  return (
+    <ChakraProvider>
+      <AppRoutes />
+    </ChakraProvider>
+  );
 }
 
 export default App;
