@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect } from "react";
+import theme from "./config/theme";
 import { AppRoutes } from "./routes";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   }, []);
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <AppRoutes />
     </ChakraProvider>
   );
