@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "src/lib/axios";
 
 type CreateShortlinkData = {
   data: {
@@ -21,6 +21,6 @@ export function createShortlink({
   data,
 }: CreateShortlinkData): Promise<Shortlink> {
   return axiosInstance
-    .post<CreateShortlinkData, ShortlinkApiDto>("/api/link/shorten", data)
-    .then(Shortlink.fromJson);
+    .post("/api/link/shorten", data)
+    .then((resp: any) => Shortlink.fromJson(resp.data));
 }

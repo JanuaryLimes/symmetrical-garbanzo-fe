@@ -9,4 +9,7 @@ export const handlers = [
       })
     );
   }),
+  rest.post("/api/link/shorten", (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json({ shortUrl: "ddd" }));
+  }),
 ];
