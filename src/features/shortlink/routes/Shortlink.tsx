@@ -1,4 +1,3 @@
-import { Button, Center, Flex, Input, VStack } from "@chakra-ui/react";
 import { createShortlink } from "../api";
 
 export const Shortlink = () => {
@@ -11,18 +10,10 @@ export const Shortlink = () => {
     }
   }
   return (
-    <Center p="10">
-      <VStack maxW="xl" shadow="md" w="full" p="10">
-        <Flex w="full">
-          <Input variant="filled" placeholder="Paste your URL here" />
-          <Button onClick={onShortenClick} ml="5">
-            Shorten
-          </Button>
-        </Flex>
-        <Flex w="full">
-          <Input placeholder="Custom link (optional)" />
-        </Flex>
-      </VStack>
-    </Center>
+    <div>
+      <input placeholder={"Paste your URL here"}/>
+      <button onClick={onShortenClick}>Shorten</button>
+      <input placeholder={"Custom link (optional)"}/>
+    </div>
   );
 };
