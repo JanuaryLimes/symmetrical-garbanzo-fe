@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { AppRoutes } from "./routes";
+import { Nav } from "./features/nav";
 
 function App() {
   useEffect(() => {
@@ -12,7 +12,9 @@ function App() {
   }, []);
 
   return (
-      <AppRoutes />
+    <>
+      <Nav />
+    </>
   );
 }
 
