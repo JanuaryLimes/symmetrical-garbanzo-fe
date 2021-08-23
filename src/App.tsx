@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Home } from "./features/home";
 import { Nav } from "./features/nav";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Nav />
+      <Home />
     </>
   );
 }
