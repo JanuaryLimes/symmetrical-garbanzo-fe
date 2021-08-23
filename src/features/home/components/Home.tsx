@@ -3,7 +3,7 @@ import { Shortlink } from "src/features/shortlink";
 
 export function Home() {
   return (
-    <div className="bg-blue-500 text-white">
+    <div className="home text-white bg-gradient-to-b from-blue-600 to-blue-500">
       <Section>
         <h1 className="text-5xl text-center font-bold p-4">
           Shortlink
